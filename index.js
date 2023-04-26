@@ -1,6 +1,5 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+const http = require("node:http");
+const fs = require("node:fs");
 const { PeerServer } = require("peer");
 
 // const peerServer =
