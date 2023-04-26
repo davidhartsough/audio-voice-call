@@ -3,7 +3,6 @@ const randomId = "asdf";
 
 const peerConfig = {
   // host: "localhost",
-  // host: "https://daves-peer-server.glitch.me/",
   host: "/",
   port: 9000,
   path: "/p",
