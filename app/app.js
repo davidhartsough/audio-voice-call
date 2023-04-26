@@ -2,11 +2,13 @@ const audioElement = document.getElementById("remote-audio-stream");
 const randomId = "asdf";
 
 const peerConfig = {
-  host: "localhost",
-  // host: "/",
-  port: 8000,
-  path: "/",
+  // host: "https://audio-voice-call-production.up.railway.app",
+  // host: "localhost",
+  host: "/",
+  port: 9000,
+  path: "/p",
   key: "peerjs",
+  // secure: true,
 };
 
 async function init(number) {

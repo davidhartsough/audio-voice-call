@@ -4,9 +4,8 @@ const { PeerServer } = require("peer");
 
 const port = process.env.PORT || 8000;
 
-PeerServer({ port, path: "/", key: "peerjs" });
+PeerServer({ port: 9000, path: "/p", key: "peerjs" });
 
-/*
 http
   .createServer((req, res) => {
     if (req.method === "GET") {
@@ -62,4 +61,3 @@ http
     }
   })
   .listen(port);
-*/
