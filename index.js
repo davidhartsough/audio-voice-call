@@ -1,3 +1,17 @@
+const express = require("express");
+const { ExpressPeerServer } = require("peer");
+
+const port = process.env.PORT || 8000;
+const app = express();
+app.use(express.static("public"));
+const server = app.listen(port);
+
+const peerServer = ExpressPeerServer(server, {
+  path: "/p",
+});
+app.use("/peerjs", peerServer);
+
+/*
 const http = require("node:http");
 const fs = require("node:fs");
 const { PeerServer } = require("peer");
@@ -61,3 +75,4 @@ http
     }
   })
   .listen(port);
+*/

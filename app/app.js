@@ -5,8 +5,8 @@ const peerConfig = {
   // host: "https://audio-voice-call-production.up.railway.app",
   // host: "localhost",
   host: "/",
-  port: 9000,
-  path: "/p",
+  port: 8000,
+  path: "/peerjs/p",
   key: "peerjs",
   // secure: true,
 };
