@@ -2,10 +2,10 @@ const audioElement = document.getElementById("remote-audio-stream");
 const randomId = "asdf";
 
 const peerConfig = {
-  // host: "localhost",
-  host: "/",
-  port: 9000,
-  path: "/p",
+  host: "localhost",
+  // host: "/",
+  port: 8000,
+  path: "/",
   key: "peerjs",
 };
 
