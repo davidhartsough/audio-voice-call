@@ -9,5 +9,6 @@ PeerServer({ port: 9000, path: "/p", key: "peerjs" });
 //   .createServer((req, res) => {
 //     res.statusCode = 200;
 //     res.setHeader("Content-Type", "text/html");
+//     fs.createReadStream(filepath).pipe(res);
 //   })
 //   .listen(3000);
