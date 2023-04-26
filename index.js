@@ -4,12 +4,19 @@ const { ExpressPeerServer } = require("peer");
 const port = process.env.PORT || 8000;
 const app = express();
 app.use(express.static("app"));
+// app.use("/app", express.static("app"));
 const server = app.listen(port);
 
 const peerServer = ExpressPeerServer(server, {
   path: "/p",
+  // debug: true,
+  allow_discovery: true,
+  // port,
+  // key: "peerjs",
+  // corsOptions: {
+  // }
 });
-app.use("/peerjs", peerServer);
+app.use("/p", peerServer);
 
 /*
 const http = require("node:http");

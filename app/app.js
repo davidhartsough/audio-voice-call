@@ -1,24 +1,28 @@
+const Peer = window.Peer;
 const audioElement = document.getElementById("remote-audio-stream");
 const randomId = "asdf";
 
 const peerConfig = {
+  host: "/",
+  path: "/p/p",
   // host: "https://audio-voice-call-production.up.railway.app",
   // host: "localhost",
-  host: "/",
-  port: 8000,
-  path: "/peerjs/p",
-  key: "peerjs",
+  // host: "9000-peers-peerjsserver-7drb2xq6jhu.ws-us95.gitpod.io",
+  // port: 8000,
+  // key: "peerjs",
   // secure: true,
+  // debug: 3,
 };
 
 async function init(number) {
   console.log("LETS GO!", number);
+  const peerId = `${randomId}${number}`;
+  console.log("peerId:", peerId);
+  const peer = new Peer(peerId, peerConfig);
   const localStream = await navigator.mediaDevices.getUserMedia({
     audio: true,
     video: false,
   });
-  const peerId = `${randomId}${number}`;
-  const peer = new Peer(peerId, peerConfig);
   peer.on("error", (err) => {
     console.log("err:", err);
     console.log("err.type:", err.type);
